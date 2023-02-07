@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #a8c0ff, #3f2b96);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/**creando el menu*/ 
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-image: linear-gradient(315deg, #a40606 0%, #cb761c 74%);
+  background: linear-gradient(to right, #373b44, #4286f4); 
+  display: inline-block;
+  width: 100vw;
+  border-bottom: 3px solid rgb(118, 9, 9);
+}
+.contenedor img {
+  width: 120px;
+  margin: 15px 35px;
+  /*posiciona la imagen a la izquierda*/
+  float: left;
+  filter: drop-shadow(3px 3px 6px #25fe1a);
+  transition: 1s;
+}
+.contenedor img:hover {
+  filter: brightness(80) drop-shadow(3px 3px 6px #102210);
+}
+
+nav ul li {
+  /*?esto le quita los puntos que estan al inicio de cada enlace o lista*/
+  list-style: none;
+  /*esto es para que los enlaces queden uno al lado del otro como inline*/
+  float: left;
+  margin: 10px auto;
+  position: relative;
+  color: #40eb0c;
+}
+li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 17px;
+  text-shadow: 2px 2px 4px #0f63f3, 2px 2px 4px #005eff, 2px 2px 4px #1a63e0;
+  /* coloca el texto en mayuscula*/
+  text-transform: uppercase;
+  margin-right: 20px;
+  transition: 0.2s;
+  padding: 7px;
+}
+li a:hover {
+  border-radius: 15px;
+  background: linear-gradient(to left, transparent, rgb(2, 62, 94));
+  border: 2px solid rgb(12, 174, 228);
+}
+nav {
+  /*posiciona los enlaces a la derecha*/
+  float: right;
+}
+
+h2 {
+  color: rgb(172, 255, 48);
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 2</title>
+    <link rel="stylesheet" href="/css/estilo 4.css" />
+    <script src="https://kit.fontawesome.com/72568d59c9.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/740/740842.png" />
+
+  
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <a href="/index.html">
+                <img src="/multimedia/Harols-removebg-preview.png" alt="" />
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-code"></i><a href="/html/repaso1.html">repaso1</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-cube"></i><a href="/html/repaso2.html">repaso2</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user-secret"></i><a href="/html/repaso3.html">repaso3</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-code-compare"></i><a href="/html/repaso4.html">repaso4</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Repaso 4 JavaScript Practica</h1>
+
+
+    <!--*crea el boton para modo nocturno -->
+    <div>
+        <butoom class="mdark">
+            <span><i class="fa-regular fa-sun"></i></span>
+            <span><i class="fa-regular fa-moon"></i></span>
+        </butoom>
+    </div>
+
+
+    <!--*creando barra lateral -->
+    <div id="sidebar">
+        <div class="toggle-btn">
+            <span><i class="fa-solid fa-list-ul"></i></span>
+        </div>
+        <ul>
+            <li>
+                <img src="/multimedia/843280.png" alt="Logo Fazt" class="logo">
+            </li>
+            <li><a href=""><i class="fa-solid fa-house"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-discord"></i></a></li>
+            <li><a href=""><i class="fa-solid fa-trash"></i></a></li>
+            <li><a href=""><i class="fa-solid fa-gamepad"></i></a></li>
+        </ul>
+    </div>
+
+
+    <!-- *creando el buscador -->
+    <section class="contenedor-main">
+
+        <div>
+            <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+
+            <ul class="listaArticulos">
+                <li class="articulo">🍇Mora</li>
+                <li class="articulo">🍊Naranja</li>
+                <li class="articulo">🍓Fresa</li>
+                <li class="articulo">🍐Pera</li>
+                <li class="articulo">🍍Piña</li>
+                <li class="articulo">🍌Plátano</li>
+                <li class="articulo">🍈Melon</li>
+                <li class="articulo">🥭Mango</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!--* creando calculadora -->
+
+    <div class="container">
+        <div class="calculadora">
+            <div class="display">
+                <div id="valor-anterior"></div>
+                <div id="valor-actual"></div>
+            </div>
+            <!-- se llama el archivo js display el metodo borrarTodo -->
+            <button class="col-2" onclick="display.borrarTodo()">C</button>
+            <!-- se llama el  archivo js display con el metodo borrar -->
+            <button onclick="display.borrar()">&larr;</button>
+            <!--los value que tienen los operadores son los que estan definidos en Calculadora.js -->
+            <button class="operador" value="dividir">/</button>
+            <button class="numero">7</button>
+            <button class="numero">8</button>
+            <button class="numero">9</button>
+            <button class="operador" value="multiplicar">x</button>
+            <button class="numero">4</button>
+            <button class="numero">5</button>
+            <button class="numero">6</button>
+            <button class="operador" value="restar">-</button>
+            <button class="numero">1</button>
+            <button class="numero">2</button>
+            <button class="numero">3</button>
+            <button class="operador" value="sumar">+</button>
+            <button class="col-2 numero">0</button>
+            <button class="numero">.</button>
+            <button class="operador" value="igual">=</button>
+        </div>
+    </div>
+
+
+    <!--el defer es para que lea el javascript luego de que haya cargado todo el html
+    sin esto no funciona la calculadora -->
+    <script src="/javascript/repaso4.js" defer></script>
+    <script src="/javascript/Display.js" ></script>
+    <script src="/javascript/Calculadora.js" ></script>
+</body>
+
+</html>

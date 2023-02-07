@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #330033;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='7.8'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='9'/%3E%3Ccircle cx='539' cy='269' r='9'/%3E%3Ccircle cx='603' cy='493' r='9'/%3E%3Ccircle cx='731' cy='737' r='9'/%3E%3Ccircle cx='520' cy='660' r='9'/%3E%3Ccircle cx='309' cy='538' r='9'/%3E%3Ccircle cx='295' cy='764' r='9'/%3E%3Ccircle cx='40' cy='599' r='9'/%3E%3Ccircle cx='102' cy='382' r='9'/%3E%3Ccircle cx='127' cy='80' r='9'/%3E%3Ccircle cx='370' cy='105' r='9'/%3E%3Ccircle cx='578' cy='42' r='9'/%3E%3Ccircle cx='237' cy='261' r='9'/%3E%3Ccircle cx='390' cy='382' r='9'/%3E%3C/g%3E%3C/svg%3E");
+  transition: all 0.8s ease;
+  overflow-x: hidden;
+}
+
+/**creando el menu*/
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #330055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg fill-opacity='0.62'%3E%3Ccircle fill='%23330055' cx='50' cy='0' r='50'/%3E%3Cg fill='%233a015d' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23410165' cx='50' cy='100' r='50'/%3E%3Cg fill='%2348026e' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23500376' cx='50' cy='200' r='50'/%3E%3Cg fill='%2357047e' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%235f0587' cx='50' cy='300' r='50'/%3E%3Cg fill='%2367068f' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%236f0798' cx='50' cy='400' r='50'/%3E%3Cg fill='%237707a0' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%238008a9' cx='50' cy='500' r='50'/%3E%3Cg fill='%238909b1' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%239109ba' cx='50' cy='600' r='50'/%3E%3Cg fill='%239a09c3' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23a309cb' cx='50' cy='700' r='50'/%3E%3Cg fill='%23ad09d4' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23b608dc' cx='50' cy='800' r='50'/%3E%3Cg fill='%23c007e5' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23c905ee' cx='50' cy='900' r='50'/%3E%3Cg fill='%23d303f6' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23D0F' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
+  display: inline-block;
+  width: 100vw;
+  border-bottom: 3px solid rgb(118, 9, 9);
+}
+.contenedor img {
+  width: 120px;
+  margin: 15px 35px;
+  /*posiciona la imagen a la izquierda*/
+  float: left;
+  filter: drop-shadow(3px 3px 6px #25fe1a);
+  transition: 1s;
+}
+.contenedor img:hover {
+  filter: brightness(80) drop-shadow(3px 3px 6px #102210);
+}
+
+nav ul li {
+  /*?esto le quita los puntos que estan al inicio de cada enlace o lista*/
+  list-style: none;
+  /*esto es para que los enlaces queden uno al lado del otro como inline*/
+  float: left;
+  margin: 25px auto;
+  position: relative;
+  color: #40eb0c;
+}
+li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 17px;
+  text-shadow: 2px 2px 4px #0f63f3, 2px 2px 4px #005eff, 2px 2px 4px #1a63e0;
+  /* coloca el texto en mayuscula*/
+  text-transform: uppercase;
+  margin-right: 20px;
+  transition: 0.2s;
+  padding: 7px;
+}
+li a:hover {
+  border-radius: 15px;
+  background: linear-gradient(to left, transparent, rgb(2, 62, 94));
+  border: 2px solid rgb(12, 174, 228);
+}
+nav {
+  /*posiciona los enlaces a la derecha*/
+  float: right;
+}
+
+h1 {
+  color: rgb(172, 255, 48);
+  text-align: center;
+  margin-top: 115px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/*!creando boton de modo dark */
+
+/*modificamos el contenedor*/
+.mdark {
+  border-radius: 60px;
+  border: 1px solid rgb(21, 1, 1);
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  background-color: rgb(16, 12, 146);
+  right: 0;
+  top: 92px;
+  margin: 0 15px;
+  box-shadow: 0px 0px 4px 0.9px white;
+  transition: 0.5s;
+}
+
+/*modificamos los iconos*/
+.mdark span {
+  width: 30px;
+  height: 30px;
+  /*mueve los iconos verticalmente */
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  color: white;
+}
+
+/*creamos un contenedor(o boton) que tapara a un icono mientras el otro este activo */
+.mdark::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*uset se puede usar para quitar un valor de posicionamiento en este caso lo que hara sera que
+    cuando el usuario le de click right valdra 0 y left unset */
+  right: unset;
+  border-radius: 100px;
+  box-shadow: 0px 0px 2px 1px white;
+}
+
+/*clicks es una clase que se crea en javascript dentro del contenedor mdark, lo que hara sera es
+cambiar los estilos cuando se de un click en el boton, aqui cambia el color de fondo del contenedor  */
+.mdark.clicks {
+  background: #eb1515;
+}
+
+/*cuando de click se cambiara por esta posicion*/
+.mdark.clicks::after {
+  right: 0;
+  left: unset;
+}
+
+/* configuramos la clase claro que tiene el body, esta clase se creo en javascript. estos 
+efectos se aplican cuando se da un click */
+body.claro {
+  background: #ffffff;
+  color: rgb(21, 1, 1);
+}
+
+/* esta clase se le puede agrgar a cualquier elemento para cambiar sus propiedades */
+body.claro header {
+  background: #1a63e0;
+}
+
+.claro h1 {
+  color: black;
+}
+
+.claro #sidebar .toggle-btn span i {
+  color: rgb(0, 0, 0);
+}
+
+/*!creando barra lateral */
+
+#sidebar {
+  top: 73px;
+  position: fixed;
+  width: 60px;
+  height: 100%;
+  background: #820635;
+  /*esto es el tamaño que se va a ocultar */
+  left: -60px;
+  transition: all 0.4s linear;
+}
+
+/*active es una clase para javascrript, aqui colocara la barra nuevamente en la posicion 0 
+funcionara para que aparezca y desaparezca la barra*/
+#sidebar.active {
+  left: 0px;
+}
+
+#sidebar ul li {
+  list-style: none;
+  text-align: center;
+  padding: 15px 10px;
+  margin: 10px auto;
+}
+#sidebar ul li:first-child {
+  border-bottom: 1px solid #76d60f;
+}
+.logo {
+  border-radius: 50%;
+  display: inline-block;
+  max-width: 38px;
+}
+
+/*configuramos el boton que oculta y muestra la barra */
+#sidebar .toggle-btn {
+  position: absolute;
+  left: 70px;
+  top: 3%;
+  cursor: pointer;
+}
+/* configuramos el icono del boton */
+#sidebar .toggle-btn span i {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(2px 2px 2px rgb(7, 6, 85));
+}
+
+/*!estilos del buscador */
+
+.contenedor-main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.contenedor-main input {
+  width: 43vw;
+  padding: 10px;
+  outline: none;
+  border: 4px solid #556685;
+  border-radius: 20px;
+  font-weight: bolder;
+  font-size: 12px;
+  display: block;
+}
+
+.listaArticulos {
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-size: 21px;
+  margin-top: 17px;
+  list-style: none;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  max-width: 38vw;
+  justify-content: center;
+}
+.listaArticulos li {
+  margin: 6px;
+}
+
+/*esto funcionara para ocultar los elementos que no tienen las letras que ponemos en el buscador */
+.filtro {
+  display: none;
+}
+
+/*!Creando calculadora */
+
+
+/*modificamos las propiedades que tendra la calculadora */
+.container {
+  display: flex;
+  margin: 40px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/*modificamos los estilos que tendra la calculadora */
+.calculadora {
+  display: grid;
+  grid-template-columns: repeat(4, 62px);
+  grid-template-rows: 160px repeat(5, 55px);
+  background-color: #1a9c7d;
+  padding: 13px;
+  border-radius: 30px;
+  border: 3px solid rgb(6, 93, 73);
+  box-shadow: 3px 2px 9px 1px #d7bebe;
+}
+
+/*mofificamos los botones */
+button {
+  cursor: pointer;
+  margin: 3px;
+  padding: 0;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: bolder;
+  border: 2px solid rgb(8, 122, 95);
+  background-color: #0aac86;
+  box-shadow: 1px 1px 5px 0px #443939;
+}
+
+/* este es el color que se cambia al hacer un click sobre algun boton */
+button:active {
+  background-color: #006f54;
+}
+
+/*esto es para que el 0 y la C ocupen dos columnas de aancho */
+.col-2 {
+  grid-column: span 2;
+}
+
+.display {
+  grid-column: 1 / -1;
+  padding: 17px;
+  display: flex;
+  margin: 13px 5px;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #d3e9e1;
+  border-radius: 25px;
+  text-align: right;
+  justify-content: space-between;
+  /*esto es para que el texto se ajuste a la anchura del contenedor */
+  word-break: break-all;
+  border: 5px solid #07654f;
+}
+
+#valor-actual {
+  font-size: 1.5em;
+}
+
+#valor-anterior {
+  font-size: 2em;
+}
